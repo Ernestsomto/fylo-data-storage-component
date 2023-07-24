@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+ /*Color stack */
+:root {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+    --background: linear-gradient(to right, hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+}
+
+body {
+    background: url("/images/bg-desktop.png"), var(--Very-Dark-Blue);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    overflow: hidden;
+}
+  
+ /*main*/
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    margin: 15%;
+    position: relative;
+}
+  
+.Logo-main {
+    width: 250px;
+    background: var(--Dark-Blue);
+    margin-right: 10px;
+    padding: 20px;
+    height: 150px;
+    border-radius: 10px 100px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.Logo-main .logo {
+    width: 7rem;
+    height: 35px;
+    padding-bottom: 10px;
+}
+
+.wrapper-icongroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-1,
+.icon-2,
+.icon-3 {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.wrapper-icongroup img {
+    height: 20px;
+}
+
+
+.stroage-main {
+    width: 50%;
+    background: var(--Dark-Blue);
+    height: 150px;
+    margin-top: 40px;
+    border-radius: 10px;
+    padding-left: 3rem;
+    margin-left: 1rem;
+ }
+
+.remaining-space{
+    left: 75%;
+    width: 150px;
+    text-align: center;
+    background: white;
+    top: 23%;
+    position: absolute;
+    border-radius: 10px 10px 0px 10px;
+
+}
+
+.text-1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.text-2 {
+    color: var(--Grayish-Blue);
+    text-transform: uppercase;
+    vertical-align: text-top;
+    font-size: 10px;
+}
+
+b {
+    font-family: "Raleway", sans-serif;
+    color: white;
+}
+
+.Down-sign {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 30px solid white;
+    border-left: 30px solid transparent;
+    border-top: 10px solid white;
+    border-bottom: 20px solid transparent;
+    right: 0;
+    top: 10;
+    bottom: -20%;
+}
+
+.load-bar {
+    width: 90%;
+    height: 20px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 10px;
+    margin-top: 1rem;
+    display: flex;
+    position: relative;
+}
+
+
+.data-bar {
+    width: 75%;
+    height: 20px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+}
+
+.progression {
+    position: absolute;
+    top: 2px;
+    left: 71%;
+    width: 17px;
+    height: 17px;
+    background: white;
+    border-radius: 50%;
+}
+
+.storage-info {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 35px;
+    align-items: center;
+    color: white;
+}
+
+.used-storage{
+    padding-top: 10px;
+    color: var(--Grayish-Blue);
+}
+
+
+.storage-information {
+    font-family: "Raleway", sans-serif;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 35px;
+    align-items: center;
+    color: white;
+  }
+
+
+  /*Media quaries*/
+@media (max-width: 800px) {
+    body {
+        background: url("/images/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      main {
+        height: 800px;
+        flex-direction: column;
+        position: relative;
+      }
+      .Logo-main {
+        margin-right: 0;
+      }
+      .stroage-main {
+        width: 300px;
+        margin-left: 0;
+        padding-left: 10px;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .remaining-space {
+        top: 70%;
+        left: 30%;
+        border-radius: 10px;
+      }
+      .Down-sign {
+        border: 0;
+      }
+      .load-bar {
+        width: 236px;
+        height: 15px;
+        margin: auto;
+      }
+      .data-bar {
+        height: 15px;
+        width: 172px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .progression {
+        top: 1px;
+        left: 68%;
+        width: 15px;
+        height: 14px;
+      }
+    
+      .storage-info {
+        padding-left: 30px;
+      }
+  
+ 
+  }
